@@ -66,3 +66,58 @@ Description: CI/CD pipelines provide a automated way to build, test, and deploy 
 OpenAPI:
 Purpose: Standard for documenting and describing RESTful APIs.
 Description: OpenAPI provides a standardized way to document and describe RESTful APIs, making it easier for developers to understand and interact with the API.
+
+Database Design
+
+Users:
+Important fields:
+id (unique identifier)
+username (unique username chosen by the user)
+email (user's email address)
+password (user's password, hashed for security)
+role (user's role, e.g., host, guest, admin)
+Description: Users are the core entity of the project, representing individuals who interact with the platform.
+Relationships: A user can have multiple properties (as a host), multiple bookings (as a guest), and multiple reviews (as a guest or host).
+Properties:
+Important fields:
+id (unique identifier)
+title (property title)
+description (property description)
+address (property address)
+price (property price per night)
+Description: Properties represent the accommodations listed on the platform.
+Relationships: A property belongs to a user (host), can have multiple bookings, and can have multiple reviews.
+Bookings:
+Important fields:
+id (unique identifier)
+property_id (foreign key referencing the property)
+user_id (foreign key referencing the user who made the booking)
+check_in (check-in date)
+check_out (check-out date)
+Description: Bookings represent the reservations made by users for properties.
+Relationships: A booking belongs to a property, belongs to a user (guest), and can have multiple payments.
+Reviews:
+Important fields:
+id (unique identifier)
+property_id (foreign key referencing the property)
+user_id (foreign key referencing the user who wrote the review)
+rating (review rating, e.g., 1-5 stars)
+comment (review comment)
+Description: Reviews represent the feedback provided by users about their experiences with properties.
+Relationships: A review belongs to a property, belongs to a user (guest or host), and can be associated with a booking.
+Payments:
+Important fields:
+id (unique identifier)
+booking_id (foreign key referencing the booking)
+amount (payment amount)
+method (payment method, e.g., credit card, PayPal)
+status (payment status, e.g., pending, completed)
+Description: Payments represent the transactions made by users to pay for bookings.
+Relationships: A payment belongs to a booking, and a booking can have multiple payments.
+Entity Relationships:
+
+A user can have multiple properties (one-to-many).
+A property belongs to a user (many-to-one).
+A booking belongs to a property (many-to-one) and a user (many-to-one).
+A review belongs to a property (many-to-one) and a user (many-to-one).
+A payment belongs to a booking (many-to-one).
