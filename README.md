@@ -129,3 +129,23 @@ Property Management: Property management is a key feature that allows users to c
 Booking System: The booking system is a critical feature that enables users to book properties and manage their bookings. This feature contributes to the project by providing a seamless and efficient way for users to search, book, and manage properties, including checking availability, making payments, and receiving confirmations. By having a robust booking system, the project can ensure that users can easily find and book properties that meet their needs.
 Payment Processing: Payment processing is a vital feature that enables users to make secure payments for their bookings. This feature contributes to the project by providing a reliable and efficient way to process payments, including credit card transactions and other payment methods. By having a secure payment processing system, the project can ensure that users can trust the platform with their financial information and make payments with confidence.
 Review System: The review system is a valuable feature that allows users to leave reviews and ratings for properties. This feature contributes to the project by providing a way for users to share their experiences and opinions about properties, helping others to make informed decisions when booking. By having a review system, the project can build trust and credibility among users, increasing the overall quality of the platform and attracting more users.
+
+API Security:
+Authentication:
+Implementing secure authentication protocols, such as OAuth or JWT, to verify user identities and ensure that only authorized users can access the platform.
+Why: Authentication is crucial for protecting user data and preventing unauthorized access to the platform. If an attacker gains access to a user's account, they could potentially steal sensitive information, make unauthorized bookings, or leave fake reviews.
+Authorization:
+Implementing role-based access control to restrict access to certain features and data based on user roles (e.g., admin, host, guest).
+Why: Authorization is crucial for ensuring that users can only perform actions that they are authorized to do. For example, a guest should not be able to access the host's dashboard or modify their property listings.
+Rate Limiting:
+Implementing rate limiting to prevent brute-force attacks, denial-of-service (DoS) attacks, and other types of abuse.
+Why: Rate limiting is crucial for preventing attackers from overwhelming the platform with requests, which could lead to downtime, data loss, or other security breaches.
+Data Encryption:
+Implementing encryption protocols, such as SSL/TLS, to protect data in transit and at rest.
+Why: Data encryption is crucial for protecting sensitive user data, such as credit card numbers, addresses, and other personal information. If an attacker intercepts or gains access to this data, they could use it for malicious purposes.
+Secure Payment Processing:
+Implementing secure payment processing protocols, such as PCI-DSS, to protect payment information and prevent fraud.
+Why: Secure payment processing is crucial for protecting users' financial information and preventing financial losses due to fraud or other security breaches.
+Regular Security Audits and Updates:
+Conducting regular security audits and updates to identify and address potential vulnerabilities.
+Why: Regular security audits and updates are crucial for ensuring that the platform remains secure and up-to-date with the latest security patches and best practices.
