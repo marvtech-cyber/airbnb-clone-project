@@ -19,7 +19,7 @@ Caching and Session Management: Redis
 Containerization: Docker
 CI/CD Pipelines: Automated testing and deployment pipelines
 
-
+Team Roles
 Backend Developer:
 Responsible for implementing API endpoints, database schemas, and business logic.
 Develops and maintains the backend codebase, ensuring it is scalable, efficient, and secure.
